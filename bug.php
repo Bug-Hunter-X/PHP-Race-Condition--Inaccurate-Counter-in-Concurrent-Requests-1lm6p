@@ -1,0 +1,1 @@
+This code suffers from a race condition.  If two requests hit the `updateCounter` function concurrently, the final counter value might be incorrect. This is because the increment operation (`$counter++`) is not atomic.  One thread might read the value, increment it in memory, and then another thread reads the old value before the first thread writes the updated value back.
