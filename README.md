@@ -1,0 +1,1 @@
+This repository demonstrates a race condition bug in PHP and its solution. The `bug.php` file shows code with a non-atomic increment operation on a counter, leading to inaccurate results under concurrent requests. The `bugSolution.php` file provides a solution using file locking to ensure atomicity.
